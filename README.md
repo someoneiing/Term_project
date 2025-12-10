@@ -24,6 +24,7 @@ back/
     └── .dockerignore
 
 docker-compose.yml                         # db(api), api, ai, front 서비스 정의
+```
 
 ## 주요 기능
 - 노트 CRUD + 이미지/PDF 업로드(H2 local / MySQL prod)
