@@ -1,6 +1,7 @@
 # 규장각 – 인공지능 기반 문서 관리 에이전트 
 
 ## 구성
+```text
 back/
 ├── api/main/                              # Spring Boot API (JPA/JWT, MySQL prod / H2 local)
 │   ├── src/main/java/com/example/main/    # controllers, services, entities
@@ -22,8 +23,7 @@ back/
     ├── Dockerfile                         # Nginx로 정적 파일 서빙
     └── .dockerignore
 
-docker-compose.yml                          # db(api), api, ai, front 서비스 정의
-
+docker-compose.yml                         # db(api), api, ai, front 서비스 정의
 
 ## 주요 기능
 - 노트 CRUD + 이미지/PDF 업로드(H2 local / MySQL prod)
