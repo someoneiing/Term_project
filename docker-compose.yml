@@ -32,7 +32,7 @@ services:
   ai:
     build: back/ai/main
     environment:
-      GOOGLE_API_KEY: AIzaSyB6wZwjgyhf0QrScDXfEU8qdRyETJU5Z9s
+      GOOGLE_API_KEY: ${GOOGLE_API_KEY}
       API_URL: http://api:8042
       SERVER_PORT: 5042
     ports:
