@@ -1,0 +1,1 @@
+ALTER TABLE notes MODIFY COLUMN pdf_url TEXT; 

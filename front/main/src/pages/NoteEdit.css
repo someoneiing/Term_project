@@ -1,0 +1,97 @@
+/* note-edit-wrapper: 전체 중앙정렬 및 배경 */
+.note-edit-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 80vh;
+  width: 100%;
+  background: #f7f8fa;
+  padding: 6vh 0 6vh 0;
+  box-sizing: border-box;
+  text-align: left;
+  margin: 0 auto;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.note-edit-container {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  padding: 48px 56px 32px 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.note-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 24px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.note-edit-container select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 40px 12px 18px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  appearance: none;
+  /* Dropdown indicator icon on the right */
+  background:
+    url("data:image/svg+xml,%3Csvg%20fill%3D%27gray%27%20height%3D%2720%27%20viewBox%3D%270%200%2024%2024%27%20width%3D%2720%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5z%27%2F%3E%3C%2Fsvg%3E") no-repeat right 16px center;
+  background-size: 20px 20px;
+  background-color: #fff;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.note-edit-container label {
+  padding-left: 2px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.note-edit-container input,
+.note-edit-container textarea {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  padding-left: 18px;
+  padding-right: 18px;
+  box-sizing: border-box;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.note-edit-actions {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  margin: 32px auto 0 auto;
+  max-width: 900px;
+  width: 100%;
+}
+.note-edit-actions button {
+  flex: 1 1 0;
+  min-width: 0;
+  width: 100%;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+@media (max-width: 1100px) {
+  .note-edit-container {
+    padding: 28px 12px 20px 12px;
+    max-width: 100%;
+  }
+  .note-edit-actions {
+    flex-direction: column;
+    gap: 10px;
+    max-width: 100%;
+  }
+  .note-edit-wrapper {
+    padding: 2vh 0 2vh 0;
+  }
+} 

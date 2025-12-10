@@ -1,0 +1,33 @@
+/* main/front/main/src/components/Layout.css */
+
+/* 좌우 flex 레이아웃 제거(혹시 남아있어도 무해) */
+.layout {
+  display: block;
+  min-height: 100vh;
+}
+
+/* 왼쪽 여백 제거, 상단 여백 부여(Topbar 높이 56px) */
+.main-content {
+  min-height: 100vh;
+  background: #e4e4f0;
+  margin-left: 0;         /* ✅ 제거 */
+  padding-top: 56px;      /* ✅ Topbar 높이와 동일 */
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding-top: 56px;
+  }
+}
+/* 페이지 공통 한지 배경 (선택) */
+body, .main-content {
+  background:
+    radial-gradient(600px 300px at 10% 0%, rgba(0,0,0,0.03), transparent 70%),
+    radial-gradient(800px 400px at 90% 0%, rgba(0,0,0,0.03), transparent 70%),
+    repeating-linear-gradient(
+      0deg,
+      rgba(0,0,0,0.012) 0 2px,
+      rgba(0,0,0,0.020) 2px 4px
+    ),
+    #f5f0e6; /* 한지 바탕색 */
+}

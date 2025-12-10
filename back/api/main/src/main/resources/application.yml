@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: tmp
+  profiles:
+    active: prod
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+server:
+  tomcat:
+    max-part-count: 20
+ai:
+  url: ${AI_URL}
+cors:
+  allowed-origins: ${FRONTEND_URL}

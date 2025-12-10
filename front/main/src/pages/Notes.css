@@ -1,0 +1,537 @@
+.notes {
+  padding: 30px;
+  min-height: 100vh;
+  background: #ece9e9;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.notes-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.notes-header h1 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.notes-header p {
+  color: #666;
+  font-size: 1.1rem;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.notes-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.notes-filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.1);
+}
+
+.category-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.category-filter label {
+  font-weight: 600;
+  color: #333;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.category-select {
+  padding: 8px 12px;
+  border: 2px solid #e1e5e9;
+  border-radius: 5px;
+  font-size: 14px;
+  background: white;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.notes-count {
+  color: #666;
+  font-weight: 600;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  /* grid-template-rows: repeat(auto-fill, minmax(100px, 1fr)); */
+  gap: 20px;
+  /* gap:100px; */
+}
+
+.note-card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.note-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.note-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.note-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.2rem;
+  flex: 1;
+  text-align: left;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* For list view, ensure the title span is left-aligned */
+.note-list-row span[style*='cursor:pointer'] {
+  text-align: left !important;
+}
+
+.note-category {
+  background: #667eea;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-left: 10px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.note-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  min-height: 60px;
+}
+
+.note-summary {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-break: break-all;
+  white-space: pre-line;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.note-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-bottom: 16px;
+}
+
+.keyword {
+  background: #f0f2f5;
+  color: #667eea;
+  padding: 4px 8px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.note-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.upload-date {
+  color: #999;
+  font-size: 0.9rem;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.note-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.action-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.view-btn {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.view-btn:hover {
+  background: #bbdefb;
+}
+
+.quiz-btn {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+.quiz-btn:hover {
+  background: #bbdefb;
+  color: #1976d2;
+}
+
+.edit-btn {
+  background: #fff3e0;
+  color: #f57c00;
+}
+.edit-btn:hover {
+  background: #ffe0b2;
+}
+
+.delete-btn {
+  background: #ffebee;
+  color: #e53935;
+}
+.delete-btn:hover {
+  background: #ffcdd2;
+  color: #e53935;
+}
+
+.no-notes {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+}
+
+.no-notes p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .notes {
+    padding: 20px;
+  }
+
+  .notes-filters {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+
+  .notes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.modal-overlay-center {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.35);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-content-center {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px #0003;
+  padding: 36px 32px 28px 32px;
+  min-width: 480px;
+  max-width: 700px;
+  max-height: 80vh;
+  overflow-y: hidden;
+  position: relative;
+  animation: modalIn 0.18s cubic-bezier(.4,1.6,.6,1) 1;
+}
+@media (max-width: 900px) {
+  .modal-content-center {
+    min-width: 0;
+    max-width: 98vw;
+    padding: 18px 4vw 16px 4vw;
+  }
+}
+@keyframes modalIn {
+  from { transform: translateY(40px) scale(0.97); opacity: 0; }
+  to { transform: none; opacity: 1; }
+}
+.modal-note-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.modal-note-meta {
+  display: flex;
+  gap: 18px;
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.modal-note-content {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 18px;
+  padding: 8px 0;
+  line-height: 1.7;
+  max-height: 38vh;
+  text-align: left;
+}
+.modal-note-content textarea {
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1.6;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #fafbfc;
+  resize: vertical;
+}
+.modal-note-actions {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  margin-top: 18px;
+}
+.modal-complete-btn,
+.modal-incomplete-btn {
+  width: 100%;
+  padding: 16px 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  letter-spacing: 0.02em;
+  box-shadow: 0 2px 8px #1976d222;
+  cursor: pointer;
+  transition: background 0.18s, box-shadow 0.18s, transform 0.12s;
+}
+.modal-complete-btn {
+  background: linear-gradient(90deg, #4f8cff 0%, #1976d2 100%);
+  color: #fff;
+}
+.modal-complete-btn:hover {
+  background: linear-gradient(90deg, #1976d2 0%, #4f8cff 100%);
+  box-shadow: 0 4px 16px #1976d244;
+  transform: translateY(-2px) scale(1.02);
+}
+.modal-incomplete-btn {
+  background: linear-gradient(90deg, #e0e7ef 0%, #bfc9d9 100%);
+  color: #444;
+  box-shadow: 0 2px 8px #bfc9d922;
+}
+.modal-incomplete-btn:hover {
+  background: linear-gradient(90deg, #bfc9d9 0%, #e0e7ef 100%);
+  box-shadow: 0 4px 16px #bfc9d944;
+  transform: translateY(-2px) scale(1.02);
+}
+
+.note-detail-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 10vh 4vw;
+  height: 80vh;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.note-detail-image {
+  position: sticky;
+  top: 4vh;
+  max-width: 320px;
+  max-height: 60vh;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  background: #fff;
+  transition: box-shadow 0.2s;
+  display: block;
+}
+
+.note-detail-container {
+  position: relative;
+  flex: 1;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  padding: 36px 40px 12px 40px;
+  min-width: 220px;
+  max-width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.note-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+.note-hashtags {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.note-meta {
+  text-align: center;
+  color: #888;
+  margin-bottom: 18px;
+}
+
+.modal-note-actions {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  margin-top: 18px;
+}
+.modal-complete-btn,
+.modal-incomplete-btn {
+  width: 100%;
+  padding: 16px 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  letter-spacing: 0.02em;
+  box-shadow: 0 2px 8px #1976d222;
+  cursor: pointer;
+  transition: background 0.18s, box-shadow 0.18s, transform 0.12s;
+}
+.modal-complete-btn {
+  background: linear-gradient(90deg, #4f8cff 0%, #1976d2 100%);
+  color: #fff;
+}
+.modal-complete-btn:hover {
+  background: linear-gradient(90deg, #1976d2 0%, #4f8cff 100%);
+  box-shadow: 0 4px 16px #1976d244;
+  transform: translateY(-2px) scale(1.02);
+}
+.modal-incomplete-btn {
+  background: linear-gradient(90deg, #e0e7ef 0%, #bfc9d9 100%);
+  color: #444;
+  box-shadow: 0 2px 8px #bfc9d922;
+}
+.modal-incomplete-btn:hover {
+  background: linear-gradient(90deg, #bfc9d9 0%, #e0e7ef 100%);
+  box-shadow: 0 4px 16px #bfc9d944;
+  transform: translateY(-2px) scale(1.02);
+}
+
+.dummy-btn {
+  background: linear-gradient(90deg, #4f8cff 0%, #1976d2 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.05rem;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 0;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  box-shadow: 0 2px 8px #1976d222;
+  cursor: pointer;
+  transition: box-shadow 0.18s, transform 0.12s;
+  display: block;
+}
+.dummy-btn:hover {
+  background: linear-gradient(90deg, #1976d2 0%, #1565c0 100%);
+  box-shadow: 0 6px 20px #1976d244;
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* === 모든 카드 공통 테마: 버건디 × 한지 × 목재 포인트 === */
+.note-card{
+  position: relative;
+  display:flex; flex-direction:column;
+  border-radius: 18px;
+  padding: 20px 18px;
+  /* 상단 얕은 목재 띠 + 한지 질감 */
+  background:
+    linear-gradient(90deg,
+      color-mix(in srgb, #6b4f3a 20%, transparent),
+      color-mix(in srgb, #8a664b 20%, transparent),
+      color-mix(in srgb, #5a4233 20%, transparent)) top center no-repeat,
+    radial-gradient(900px 400px at 100% -10%, rgba(0,0,0,0.03), transparent 70%),
+    linear-gradient(0deg, rgba(255,255,255,.65), rgba(255,255,255,.65)),
+    #fffdf6;
+  background-size: 100% 6px, auto, auto, auto;
+  border: 1px solid color-mix(in srgb, var(--topbar-active, #c19a6b) 55%, #e8dcc7);
+  box-shadow:
+    0 12px 28px rgba(122,31,42,0.18),
+    inset 0 0 0 1px color-mix(in srgb, var(--topbar-active, #c19a6b) 25%, transparent);
+  transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+}
+.note-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(122,31,42,0.25);
+  border-color: color-mix(in srgb, var(--topbar-active, #c19a6b) 70%, #e8dcc7);
+}
+
+/* 타이틀/뱃지/키워드 톤 */
+.note-card .note-header h3{
+  letter-spacing: .01em;
+  color: #1e1714;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.18);
+}
+.note-card .note-category{
+  background: color-mix(in srgb, #7a1f2a 12%, #fff);
+  color: #3a2d25;
+  border: 1px solid color-mix(in srgb, #7a1f2a 28%, #e6d9c7);
+  font-weight: 800;
+}
+.note-card .keyword{
+  background: #efe7d8;
+  color: #7a1f2a;
+  border: 1px solid color-mix(in srgb, #7a1f2a 25%, #efe7d8);
+}
+
+/* 구분선/메타 정보 */
+.note-card .note-footer{
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+.note-card .upload-date{
+  color: #8f837b;
+  font-weight: 700;
+}
+
+/* 버튼: 퀴즈 버튼만 금사 느낌 강조(나머지는 기존 스타일 유지) */
+.note-card .action-btn.quiz-btn{
+  background: linear-gradient(180deg, #f1e7c9, #ead49c);
+  color: #3a2d25;
+  border-color: color-mix(in srgb, #c19a6b 55%, transparent);
+}
+.note-card .action-btn.quiz-btn:hover{
+  box-shadow: 0 0 0 2px color-mix(in srgb, #c19a6b 35%, transparent);
+}

@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/material": "^7.2.0",
+    "escape-string-regexp": "4.0.0",
+    "highlight.js": "^11.11.1",
+    "katex": "^0.16.22",
+    "pdfjs-dist": "^5.3.93",
+    "react-beautiful-dnd": "^13.1.1",
+    "react-markdown": "^10.1.0",
+    "react-pdf": "^10.0.1",
+    "react-tooltip": "^5.29.1",
+    "recharts": "^3.0.2",
+    "rehype-highlight": "^7.0.2",
+    "rehype-katex": "^7.0.1",
+    "rehype-raw": "^7.0.0",
+    "remark-gfm": "^4.0.1",
+    "remark-math": "^6.0.0",
+    "swiper": "^11.2.10"
+  }
+}
