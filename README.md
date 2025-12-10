@@ -1,21 +1,29 @@
 # 규장각 – 인공지능 기반 문서 관리 에이전트 
 
 ## 구성
-```
 back/
-  api/main/               # Spring Boot API (JPA/JWT, MySQL prod / H2 local)
-    src/main/java/com/example/main/...  # controllers, services, entities
-    src/main/resources/   # application.yml, Flyway 스크립트(V1~V4)
-    Dockerfile            # Gradle 멀티스테이지 빌드 → JRE17 런타임
-    .dockerignore
-  ai/main/                # Flask + Google Gemini 요약/퀴즈 API
-    app.py, requirements.txt
-    Dockerfile, .dockerignore
-front/main/               # React (CRA) 프론트엔드
-  src/, public/, package.json, yarn.lock
-  Dockerfile, .dockerignore (Nginx 서빙)
-docker-compose.yml        # db(api), api, ai, front 서비스 정의
-```
+├── api/main/                              # Spring Boot API (JPA/JWT, MySQL prod / H2 local)
+│   ├── src/main/java/com/example/main/    # controllers, services, entities
+│   ├── src/main/resources/                # application.yml, Flyway 스크립트(V1~V4)
+│   ├── Dockerfile                         # Gradle 멀티스테이지 빌드 → JRE17 런타임
+│   └── .dockerignore
+│
+├── ai/main/                               # Flask + Google Gemini 요약/퀴즈 API
+│   ├── app.py
+│   ├── requirements.txt
+│   ├── Dockerfile
+│   └── .dockerignore
+│
+└── front/main/                            # React(CRA) 프론트엔드
+    ├── src/
+    ├── public/
+    ├── package.json
+    ├── yarn.lock
+    ├── Dockerfile                         # Nginx로 정적 파일 서빙
+    └── .dockerignore
+
+docker-compose.yml                          # db(api), api, ai, front 서비스 정의
+
 
 ## 주요 기능
 - 노트 CRUD + 이미지/PDF 업로드(H2 local / MySQL prod)
